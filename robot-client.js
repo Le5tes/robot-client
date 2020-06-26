@@ -5,7 +5,9 @@ const start = () => {
         const websocket = new WebSocket(url)
 
         websocket.onopen = (event) => {
+            console.log("websocket connected")
             document.addEventListener("keydown",(event) => {
+                console.log("sending event")
                 switch (event.key) {
                     case "Down": // IE/Edge specific value
                     case "ArrowDown":

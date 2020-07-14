@@ -19,7 +19,7 @@ const start = () => {
                         break;
                     case "Left": // IE/Edge specific value
                     case "ArrowLeft":
-                        websocket.send(";eft")
+                        websocket.send("left")
                         break;
                     case "Right": // IE/Edge specific value
                     case "ArrowRight":

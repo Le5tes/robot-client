@@ -3,6 +3,7 @@ const start = () => {
     url = document.querySelector('input').value
     if (url) {
         const websocket = new WebSocket(url)
+        var player = new JSMpeg.Player(url, {canvas: document.getElementById('camera-view-canvas')})
 
         websocket.onopen = (event) => {
             console.log("websocket connected")
@@ -19,7 +20,7 @@ const start = () => {
                         break;
                     case "Left": // IE/Edge specific value
                     case "ArrowLeft":
-                        websocket.send(";eft")
+                        websocket.send("left")
                         break;
                     case "Right": // IE/Edge specific value
                     case "ArrowRight":
